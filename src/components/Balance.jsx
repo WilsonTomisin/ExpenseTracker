@@ -13,12 +13,14 @@ const Balance = () => {
       return acc + currentVal;
   },0).toFixed(2)
 
+  const hasGoodBalance = Total > 0 ? 'green': 'red'
   
-  const sign = Total > 0 ? '' : '-'
   return (
     <>
+      <div className="balance">
       <h4>Your Balance</h4>
-      <h1>{sign}${Total}</h1>
+      <h1 className= {hasGoodBalance}>${Total}</h1>
+      </div>
     </>
   )
 }
