@@ -9,6 +9,11 @@ const AppReducer = (state,action) => {
                 return transaction.id !== action.payload
             })
         }
+    }else if (action.type == 'add') {
+        return{
+            ...state,
+            transactions: [...state.transactions, action.payload]
+        }
     }else{
         return state
     }
