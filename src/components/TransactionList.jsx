@@ -5,8 +5,7 @@ import Transactions from './Transactions'
 const TransactionList = () => {
 
     const NewContext = React.useContext(GlobalContext)
-    console.log('New context log: '+NewContext)
-    console.log('New context log: '+NewContext.transactions)
+    
   return (
     <>
       <h3>History</h3>
